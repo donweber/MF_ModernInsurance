@@ -1,0 +1,359 @@
+name: MF_ModernInsurance
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /MF_ModernInsurance/src
+        type: javaClasspath
+  - name: MF_ModernIns_ListCustomer_HTTP.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F042D6525C4A60EF72E23734373638
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_HTTP.recsession
+        type: testRecsession
+  - name: MF_ModernIns_Login.recdata
+  - name: MF_ModernIns_Login.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_Login.recdata
+        type: recsessionRecdata
+  - name: MF_ModernIns_Login.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F04218D6F78780EF72E23734373638
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_Login.recsession
+        type: testRecsession
+      - path: /MF_ModernInsurance/prod_hclpnp_com.ma
+        type: test#moeb.applicationPackage
+  - name: MF_ModernIns_Login_1749133513395.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749133513395
+      tags: 
+      testId: A1F04218D6F78780EF72E23734373638
+      testName: MF_ModernIns_Login
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_Login.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_1749133513395.xmoebreport
+        type: statsSessionAsset
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_1749133513395_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_1749133513395_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_1749133513395_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_1749133513395_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_1749133514128.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernIns_Login_1749133513395.xmoebreport
+  - name: MF_ModernIns_Login_1749133513395_orch!system.mstats
+  - name: MF_ModernIns_Login_1749133513395_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernIns_Login_1749133513395_perf!localhost.mstats
+  - name: MF_ModernIns_Login_1749133513395_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernIns_Login_1749133514128.executiondlr
+  - name: MF_ModernIns_Login_HTTP.recdata
+  - name: MF_ModernIns_Login_HTTP.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_HTTP.recdata
+        type: recsessionRecdata
+  - name: MF_ModernIns_Login_HTTP_1749214942959.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749214942959
+      tags: 
+      testId: A1F042D6525C4A60EF72E23734373638
+      testName: MF_ModernIns_Login_HTTP
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_ListCustomer_HTTP.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_HTTP_1749214942959_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_HTTP_1749214942959_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_HTTP_1749214942959_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_HTTP_1749214942959_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_Login_HTTP_1749214943229.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernIns_Login_HTTP_1749214942959_orch!system.mstats
+  - name: MF_ModernIns_Login_HTTP_1749214942959_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernIns_Login_HTTP_1749214942959_perf!localhost.mstats
+  - name: MF_ModernIns_Login_HTTP_1749214942959_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernIns_Login_HTTP_1749214943229.executiondlr
+  - name: MF_ModernIns_SSC1.recdata
+  - name: MF_ModernIns_SSC1.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_SSC1.recdata
+        type: recsessionRecdata
+  - name: MF_ModernIns_SSC1.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F042EB96FC72C0EF72E23734373638
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_SSC1.recsession
+        type: testRecsession
+  - name: MF_ModernIns_SSC1_1749224158852.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749224158852
+      tags: 
+      testId: A1F042EB96FC72C0EF72E23734373638
+      testName: MF_ModernIns_SSC1
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernIns_SSC1.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernIns_SSC1_1749224158852_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_SSC1_1749224158852_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_SSC1_1749224158852_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_SSC1_1749224158852_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernIns_SSC1_1749224159105.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernIns_SSC1_1749224158852_orch!system.mstats
+  - name: MF_ModernIns_SSC1_1749224158852_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernIns_SSC1_1749224158852_perf!localhost.mstats
+  - name: MF_ModernIns_SSC1_1749224158852_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernIns_SSC1_1749224159105.executiondlr
+  - name: MF_ModernInsurance_ListUsers.recdata
+  - name: MF_ModernInsurance_ListUsers.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers.recdata
+        type: recsessionRecdata
+  - name: MF_ModernInsurance_ListUsers.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F0421AAC9BCD00EF72E23734373638
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers.recsession
+        type: testRecsession
+      - path: /MF_ModernInsurance/Sleep_5.js
+        type: test#moeb.jsFile
+      - path: /MF_ModernInsurance/prod_hclpnp_com.ma
+        type: test#moeb.applicationPackage
+  - name: MF_ModernInsurance_ListUsers_1749134391429.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749134391429
+      tags: 
+      testId: A1F0421AAC9BCD00EF72E23734373638
+      testName: MF_ModernInsurance_ListUsers
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749134391429.xmoebreport
+        type: statsSessionAsset
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749134391429_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749134391429_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749134391429_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749134391429_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749134391613.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernInsurance_ListUsers_1749134391429.xmoebreport
+  - name: MF_ModernInsurance_ListUsers_1749134391429_orch!system.mstats
+  - name: MF_ModernInsurance_ListUsers_1749134391429_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749134391429_perf!localhost.mstats
+  - name: MF_ModernInsurance_ListUsers_1749134391429_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749134391613.executiondlr
+  - name: MF_ModernInsurance_ListUsers_1749136339645.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749136339645
+      tags: 
+      testId: A1F0421AAC9BCD00EF72E23734373638
+      testName: MF_ModernInsurance_ListUsers
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749136339645.xmoebreport
+        type: statsSessionAsset
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749136339645_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749136339645_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749136339645_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749136339645_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749136339831.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernInsurance_ListUsers_1749136339645.xmoebreport
+  - name: MF_ModernInsurance_ListUsers_1749136339645_orch!system.mstats
+  - name: MF_ModernInsurance_ListUsers_1749136339645_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749136339645_perf!localhost.mstats
+  - name: MF_ModernInsurance_ListUsers_1749136339645_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749136339831.executiondlr
+  - name: MF_ModernInsurance_ListUsers_1749138883265.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749138883265
+      tags: 
+      testId: A1F0421AAC9BCD00EF72E23734373638
+      testName: MF_ModernInsurance_ListUsers
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749138883265.xmoebreport
+        type: statsSessionAsset
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749138883265_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749138883265_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749138883265_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749138883265_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749138883441.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernInsurance_ListUsers_1749138883265.xmoebreport
+  - name: MF_ModernInsurance_ListUsers_1749138883265_orch!system.mstats
+  - name: MF_ModernInsurance_ListUsers_1749138883265_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749138883265_perf!localhost.mstats
+  - name: MF_ModernInsurance_ListUsers_1749138883265_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749138883441.executiondlr
+  - name: MF_ModernInsurance_ListUsers_1749139079533.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749139079533
+      tags: 
+      testId: A1F0421AAC9BCD00EF72E23734373638
+      testName: MF_ModernInsurance_ListUsers
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139079533.xmoebreport
+        type: statsSessionAsset
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139079533_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139079533_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139079533_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139079533_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139079708.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernInsurance_ListUsers_1749139079533.xmoebreport
+  - name: MF_ModernInsurance_ListUsers_1749139079533_orch!system.mstats
+  - name: MF_ModernInsurance_ListUsers_1749139079533_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749139079533_perf!localhost.mstats
+  - name: MF_ModernInsurance_ListUsers_1749139079533_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749139079708.executiondlr
+  - name: MF_ModernInsurance_ListUsers_1749139219498.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749139219498
+      tags: 
+      testId: A1F0421AAC9BCD00EF72E23734373638
+      testName: MF_ModernInsurance_ListUsers
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139219498.xmoebreport
+        type: statsSessionAsset
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139219498_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139219498_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139219498_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139219498_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139219667.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernInsurance_ListUsers_1749139219498.xmoebreport
+  - name: MF_ModernInsurance_ListUsers_1749139219498_orch!system.mstats
+  - name: MF_ModernInsurance_ListUsers_1749139219498_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749139219498_perf!localhost.mstats
+  - name: MF_ModernInsurance_ListUsers_1749139219498_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749139219667.executiondlr
+  - name: MF_ModernInsurance_ListUsers_1749139874534.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1749139874534
+      tags: 
+      testId: A1F0421AAC9BCD00EF72E23734373638
+      testName: MF_ModernInsurance_ListUsers
+    dependencies: 
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers.testsuite
+        type: statsSessionTest
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139874534.xmoebreport
+        type: statsSessionAsset
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139874534_orch!system.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139874534_orch!system.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139874534_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139874534_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /MF_ModernInsurance/MF_ModernInsurance_ListUsers_1749139874693.executiondlr
+        type: statsSessionAsset
+  - name: MF_ModernInsurance_ListUsers_1749139874534.xmoebreport
+  - name: MF_ModernInsurance_ListUsers_1749139874534_orch!system.mstats
+  - name: MF_ModernInsurance_ListUsers_1749139874534_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749139874534_perf!localhost.mstats
+  - name: MF_ModernInsurance_ListUsers_1749139874534_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: MF_ModernInsurance_ListUsers_1749139874693.executiondlr
+  - name: Sleep_5.js
+    type: moeb.jsFile
+  - name: prod_hclpnp_com.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: MF_ModernIns_Login_HTTP_Test_A1F042D6525C4A60EF72E23734373638.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: MF_ModernIns_Login_Test_A1F04218D6F78780EF72E23734373638.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: MF_ModernIns_SSC1_Test_A1F042EB96FC72C0EF72E23734373638.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: MF_ModernInsurance_ListUsers_Test_A1F0421AAC9BCD00EF72E23734373638.java
+            type: com.ibm.rational.test.lt.generatedCode
