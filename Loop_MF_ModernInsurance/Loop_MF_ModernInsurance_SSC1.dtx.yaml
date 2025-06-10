@@ -1,0 +1,26 @@
+note: Generated from recorded traffic using firefox 139.0.1
+configuration:
+  profile: firefox
+  vars:
+    APP_Loop_MF_ModernInsurance_URL: http://dp1-ap-51794357.prod.hclpnp.com:9082/ModernizedInsuranceApp
+steps:
+  - open:
+      note: Open Loop_MF_ModernInsurance
+      url: '${APP_Loop_MF_ModernInsurance_URL}'
+  - with:
+      note: ModernizedInsuranceApp
+      steps:
+        - click:
+            shot: ModernizedInsuranceApp_c4zhnj.dti.jpeg#166
+            object: html.img
+            identifiers:
+              - properties:
+                  - src:
+                      - val: ../common/InsuranceCustom/img/login_button_blue.png
+  - with:
+      note: ModernizedInsuranceApp
+      steps:
+        - type:
+            shot: ModernizedInsuranceApp_bt26ld.dti.jpeg
+            object: html.inputtext
+            value: ssc1
